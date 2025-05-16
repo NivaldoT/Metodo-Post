@@ -66,7 +66,7 @@ document.getElementById('formulario').addEventListener('submit', function(event)
     }
 
     var cel = document.getElementById("cel").value;
-    if(cel.length<8 || cel.length>9)
+    if(cel.length<10 || cel.length>11)
     {
         alert("telefone invalido");
         document.getElementById("cel").style.borderColor = 'red';
@@ -85,7 +85,7 @@ document.getElementById('formulario').addEventListener('submit', function(event)
     }
 
     var senha = document.getElementById("senha");
-    if(senha.length<7)
+    if(senha.value.length<7)
     {
         alert('Senha deve ter no mínimo 8 digitos!');
         document.getElementById("senha").style.borderColor = 'red';
