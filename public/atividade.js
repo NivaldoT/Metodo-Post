@@ -85,10 +85,17 @@ document.getElementById('formulario').addEventListener('submit', function(event)
     }
 
     var senha = document.getElementById("senha");
+    if(senha.length<7)
+    {
+        alert('Senha deve ter no mínimo 8 digitos!');
+        document.getElementById("senha").style.borderColor = 'red';
+        correto = false;
+    }
+
     var confir = document.getElementById("confir");
     if(confir.value!=senha.value)
     {
-        alert('senha e confirmação nao bate') 
+        alert('Senha e confirmação não batem') 
         document.getElementById("senha").style.borderColor = 'red';
         document.getElementById("confir").style.borderColor = 'red';  
         correto = false;
